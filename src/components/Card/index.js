@@ -1,6 +1,6 @@
 import "./styles.css";
 
-function Card({ transaction }) {
+function Card({ transaction, deleteTransaction }) {
   return (
     <div
       className={
@@ -14,7 +14,7 @@ function Card({ transaction }) {
           currency: "BRL",
         })}
       </p>
-      <button>
+      <button onClick={() => deleteTransaction(transaction)}>
         <svg
           width="10"
           height="11"

@@ -19,7 +19,10 @@ function App() {
           <TotalMoney listTransactions={listTransactions} />
         </div>
         {/* chamo a list */}
-        <List listTransactions={listTransactions} />
+        <List
+          listTransactions={listTransactions}
+          setListTransaction={setListTransactions}
+        />
       </div>
     </div>
   );
