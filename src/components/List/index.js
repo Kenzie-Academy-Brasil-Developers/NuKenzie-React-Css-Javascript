@@ -1,12 +1,17 @@
 import "./styles.css";
 import Card from "../Card";
 
-function List({ listTransactions, setListTransaction }) {
+function List({
+  listTransactions,
+  setListTransaction,
+  setFixedListTransactions,
+}) {
   const deleteTransaction = (transactionRmv) => {
     const filter = listTransactions.filter(
       (transaction) => transaction.description !== transactionRmv.description
     );
-    return setListTransaction(filter);
+    setListTransaction(filter);
+    setFixedListTransactions(filter);
   };
 
   return (

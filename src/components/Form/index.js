@@ -1,6 +1,11 @@
 import "./styles.css";
 
-function Form({ listTransactions, setListTransactions }) {
+function Form({
+  listTransactions,
+  setListTransactions,
+  fixedListTransactions,
+  setFixedListTransactions,
+}) {
   const inputValue = (event) => {
     event.preventDefault();
 
@@ -17,6 +22,7 @@ function Form({ listTransactions, setListTransactions }) {
     }
     //Adiciona no meu state os valores do meu input inseridos pelo usuário
     setListTransactions([...listTransactions, listaDados]);
+    setFixedListTransactions([...fixedListTransactions, listaDados]);
   };
 
   return (
