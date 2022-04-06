@@ -6,6 +6,7 @@ import TotalMoney from "./components/TotalMoney";
 import ButtonsFilter from "./components/ButtonsFilter";
 import Loading from "./components/Loading";
 import HeaderAdmin from "./components/HeaderAdmin";
+import LandingPage from "./components/LandingPage";
 
 function App() {
   const [listTransactions, setListTransactions] = useState([]);
@@ -45,34 +46,38 @@ function App() {
 
   return (
     <div className="App">
-      <div className="App-header">
-        <HeaderAdmin isHomePage={isHomePage} />
-        <div>
-          <Form
-            listTransactions={listTransactions}
-            setListTransactions={setListTransactions}
-            fixedListTransactions={fixedListTransactions}
-            setFixedListTransactions={setFixedListTransactions}
-          />
-          <TotalMoney listTransactions={listTransactions} />
-        </div>
-        <div>
-          <ButtonsFilter
-            filterTodos={filterTodos}
-            filterEntradas={filterEntradas}
-            filterDespesas={filterDespesas}
-          />
-          {emptyList ? (
-            <Loading />
-          ) : (
-            <List
+      {homePage ? (
+        <LandingPage isHomePage={isHomePage} />
+      ) : (
+        <div className="App-header">
+          <HeaderAdmin isHomePage={isHomePage} />
+          <div>
+            <Form
               listTransactions={listTransactions}
-              setListTransaction={setListTransactions}
+              setListTransactions={setListTransactions}
+              fixedListTransactions={fixedListTransactions}
               setFixedListTransactions={setFixedListTransactions}
             />
-          )}
+            <TotalMoney listTransactions={listTransactions} />
+          </div>
+          <div>
+            <ButtonsFilter
+              filterTodos={filterTodos}
+              filterEntradas={filterEntradas}
+              filterDespesas={filterDespesas}
+            />
+            {emptyList ? (
+              <Loading />
+            ) : (
+              <List
+                listTransactions={listTransactions}
+                setListTransaction={setListTransactions}
+                setFixedListTransactions={setFixedListTransactions}
+              />
+            )}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }

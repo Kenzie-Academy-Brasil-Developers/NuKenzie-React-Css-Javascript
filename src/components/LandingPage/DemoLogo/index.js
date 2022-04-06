@@ -2,8 +2,8 @@ function DemoLogo() {
   return (
     <>
       <svg
-        width="593"
-        height="593"
+        width="100%"
+        height="100%"
         viewBox="0 0 593 593"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

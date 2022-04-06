@@ -1,16 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Nunito:wght@400;800&display=swap");
 
 .container {
-  background-color: #868e96;
+  background-color: #212529;
   height: 100vh;
   width: 100vw;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  flex-direction: row;
-  animation-name: FadeIn;
-  animation-fill-mode: both;
-  animation-duration: 2s;
+  flex-direction: column;
 }
 
 .container__divContent {
@@ -18,6 +15,76 @@
   justify-content: flex-start;
   align-items: flex-start;
   background-color: transparent;
+  flex-direction: column;
+  height: 55vh;
+  width: 100vw;
+  animation-name: FadeIn;
+  animation-fill-mode: both;
+  animation-duration: 1s;
+}
+
+.container__Logo,
+.container__Title,
+.container__Subtitle {
+  margin: 0px 0px 30px 10px;
+}
+
+.container__Title {
+  font-family: "Nunito", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 38px;
+  line-height: 48px;
+  color: #ffffff;
+  text-align: start;
+}
+
+.container__Subtitle {
+  font-family: "Nunito", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #ffffff;
+}
+
+.container__DivButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.container__Button {
+  background: #fd377e;
+  border: 2px solid #fd377e;
+  border-radius: 8px;
+  width: 240px;
+  height: 48px;
+  padding: 13px 20px 13px 20px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+}
+
+.container__Button:hover {
+  cursor: pointer;
+  background-color: #a12452;
+  border-color: #a12452;
+}
+
+.container__DivDemoLogo {
+  height: 40vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation-name: FadeIn;
+  animation-fill-mode: both;
+  animation-duration: 1s;
 }
 
 @keyframes FadeIn {
@@ -26,5 +93,101 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .container__divContent {
+    height: 45vh;
+  }
+  .container__Title {
+    width: 80%;
+  }
+
+  .container__Button {
+    width: 280px;
+  }
+
+  .container__DivDemoLogo {
+    height: 50vh;
+  }
+}
+
+@media (min-width: 768px) {
+  .container__divContent {
+    height: 45vh;
+  }
+  .container__Title {
+    width: 65%;
+  }
+
+  .container__Button {
+    width: 320px;
+  }
+
+  .container__DivDemoLogo {
+    height: 50vh;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .container {
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .container__divContent {
+    height: 45vh;
+    width: 30vw;
+  }
+
+  .container__Title {
+    width: 95%;
+  }
+
+  .container__DivButton {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .container__Button {
+    width: 240px;
+  }
+
+  .container__DivDemoLogo {
+    height: 80vh;
+    width: 50vw;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .container__divContent {
+    height: 55vh;
+    width: 30vw;
+  }
+
+  .container__Title {
+    width: 65%;
+  }
+
+  .container__DivButton {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .container__Button {
+    width: 240px;
+  }
+
+  .container__DivDemoLogo {
+    height: 80vh;
+    width: 50vw;
   }
 }
