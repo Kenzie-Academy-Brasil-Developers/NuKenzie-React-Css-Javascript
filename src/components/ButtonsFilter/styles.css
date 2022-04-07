@@ -8,6 +8,9 @@
   flex-direction: row;
   flex-wrap: wrap;
   margin-top: 15px;
+  animation-name: FadeIn;
+  animation-fill-mode: both;
+  animation-duration: 1s;
 }
 
 .containerButtonsFilter__Title {
@@ -54,6 +57,15 @@
   background-color: #fd377e;
   border-color: #fd377e;
   color: #ffffff;
+}
+
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {

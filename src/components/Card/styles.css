@@ -16,6 +16,9 @@
   flex-direction: row;
   justify-content: flex-start;
   flex-wrap: wrap;
+  animation-name: FadeIn;
+  animation-fill-mode: both;
+  animation-duration: 1s;
 }
 
 .div__Despesa:hover,
@@ -91,4 +94,13 @@ path:hover {
 .transaction__Type {
   color: #5b6166;
   margin: 0px 0px 30px 15px;
+}
+
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

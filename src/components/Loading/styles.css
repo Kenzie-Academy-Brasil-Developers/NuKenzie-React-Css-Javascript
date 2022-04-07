@@ -2,6 +2,9 @@
 
 .containerLoading {
   width: 100%;
+  animation-name: FadeIn;
+  animation-fill-mode: both;
+  animation-duration: 1s;
 }
 
 .containerLoading__Msg {
@@ -19,6 +22,15 @@
   margin-left: 10px;
   overflow-x: scroll;
   width: 100vw;
+}
+
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @media (min-width: 1024px) and (max-width: 1200px) {
