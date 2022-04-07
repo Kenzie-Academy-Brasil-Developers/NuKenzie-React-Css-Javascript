@@ -1,0 +1,42 @@
+.listCards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.listCards__DivCards {
+  overflow-x: scroll;
+  width: 100vw;
+  margin-top: 15px;
+  height: 15vh;
+  margin-left: 10px;
+}
+
+@media (min-width: 480px) {
+  .listCards__DivCards {
+    width: 480px;
+  }
+}
+
+@media (min-width: 768px) {
+  .listCards__DivCards {
+    width: 565px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+}
+
+@media (min-width: 1024px) {
+  .listCards {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .listCards__DivCards {
+    width: 100%;
+    overflow: hidden;
+    margin: 0px;
+    height: 100%;
+  }
+}

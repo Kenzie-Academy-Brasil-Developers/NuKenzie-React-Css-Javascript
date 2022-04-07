@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+
+.containerComponentForm {
+  width: 320px;
+  height: 350px;
+  border: 1px solid #e9ecef;
+  background-color: #ffffff;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.containerComponentForm__Form {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-top: 38px;
+}
+
+.containerComponentForm__Label {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: #212529;
+  font-size: 12px;
+  line-height: 22px;
+}
+
+.containerComponentForm__Input {
+  background: #f8f9fa;
+  border: 2px solid #f8f9fa;
+  border-radius: 8px;
+  padding: 0px 16px;
+}
+
+.containerComponentForm__Input--Description {
+  width: 88%;
+  height: 51px;
+}
+
+.containerComponentForm__Input--Description::placeholder,
+.containerComponentForm__Input--Value::placeholder {
+  color: #868e96;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.containerComponentForm__Paragraph {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: #868e96;
+}
+
+.containerComponentForm__DivValueAndSelect {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding-top: 15px;
+}
+
+.containerComponentForm__DivValue {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 116px;
+}
+
+.containerComponentForm__DivSelect {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 140px;
+}
+
+.containerComponentForm__Input--Value {
+  height: 46px;
+  width: 80px;
+  background: url("./img/R$.png") no-repeat right;
+  background-color: #f8f9fa;
+  background-position: 84px 14px;
+  color: #868e96;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.containerComponentForm__Input--Select {
+  width: 140px;
+  height: 50px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 26px;
+  color: #5b6166;
+}
+.containerComponentForm__Option {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 26px;
+  color: #5b6166;
+}
+
+.containerComponentForm__Button {
+  background: #fd377e;
+  border: 2px solid #fd377e;
+  box-sizing: border-box;
+  border-radius: 8px;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  height: 48px;
+  width: 100%;
+  margin: 20px 0px 0px 0px;
+}
+
+.containerComponentForm__Button:hover {
+  cursor: pointer;
+  background-color: #a12452;
+  border-color: #a12452;
+}
+
+@media (min-width: 480px) {
+  .containerComponentForm {
+    width: 363px;
+  }
+
+  .containerComponentForm__Form {
+    width: 85%;
+  }
+
+  .containerComponentForm__DivValue {
+    width: 126px;
+  }
+
+  .containerComponentForm__Input--Value {
+    width: 90px;
+  }
+
+  .containerComponentForm__DivSelect {
+    width: 155px;
+  }
+
+  .containerComponentForm__Input--Select {
+    width: 155px;
+  }
+}

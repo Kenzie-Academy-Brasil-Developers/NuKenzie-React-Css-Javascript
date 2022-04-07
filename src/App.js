@@ -51,30 +51,32 @@ function App() {
       ) : (
         <div className="App-header">
           <HeaderAdmin isHomePage={isHomePage} />
-          <div>
-            <Form
-              listTransactions={listTransactions}
-              setListTransactions={setListTransactions}
-              fixedListTransactions={fixedListTransactions}
-              setFixedListTransactions={setFixedListTransactions}
-            />
-            <TotalMoney listTransactions={listTransactions} />
-          </div>
-          <div>
-            <ButtonsFilter
-              filterTodos={filterTodos}
-              filterEntradas={filterEntradas}
-              filterDespesas={filterDespesas}
-            />
-            {emptyList ? (
-              <Loading />
-            ) : (
-              <List
+          <div className="App-Main">
+            <div>
+              <Form
                 listTransactions={listTransactions}
-                setListTransaction={setListTransactions}
+                setListTransactions={setListTransactions}
+                fixedListTransactions={fixedListTransactions}
                 setFixedListTransactions={setFixedListTransactions}
               />
-            )}
+              {!emptyList && <TotalMoney listTransactions={listTransactions} />}
+            </div>
+            <div className="App-lista">
+              <ButtonsFilter
+                filterTodos={filterTodos}
+                filterEntradas={filterEntradas}
+                filterDespesas={filterDespesas}
+              />
+              {emptyList ? (
+                <Loading />
+              ) : (
+                <List
+                  listTransactions={listTransactions}
+                  setListTransaction={setListTransactions}
+                  setFixedListTransactions={setFixedListTransactions}
+                />
+              )}
+            </div>
           </div>
         </div>
       )}

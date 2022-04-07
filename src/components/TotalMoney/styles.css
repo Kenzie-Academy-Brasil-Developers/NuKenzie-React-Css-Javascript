@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+
+.containerTotalMoney {
+  width: 320px;
+  height: 96px;
+  background: #ffffff;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.containerTotalMoney__divInfo {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 15px 0px 15px;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  height: 40%;
+}
+
+.containerTotalMoney__TitleTotalValue {
+  font-family: "Nunito", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  color: #212529;
+}
+
+.containerTotalMoney__TotalValue {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  color: #fd377e;
+}
+
+.containerTotalMoney__Parapraph {
+  font-family: "Nunito", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+  color: #5b6166;
+  margin: 0px 15px 0px 15px;
+}
+
+@media (min-width: 480px) {
+  .containerTotalMoney {
+    width: 363px;
+  }
+  .containerTotalMoney__divInfo {
+    margin: 0px 24px 0px 24px;
+  }
+
+  .containerTotalMoney__Parapraph {
+    margin: 0px 24px 0px 24px;
+  }
+}

@@ -15,14 +15,16 @@ function List({
   };
 
   return (
-    <div>
-      {listTransactions.map((transaction, index) => (
-        <Card
-          transaction={transaction}
-          key={index}
-          deleteTransaction={deleteTransaction}
-        />
-      ))}
+    <div className="listCards">
+      <div className="listCards__DivCards">
+        {listTransactions.map((transaction, index) => (
+          <Card
+            transaction={transaction}
+            key={index}
+            deleteTransaction={deleteTransaction}
+          />
+        ))}
+      </div>
     </div>
   );
 }
